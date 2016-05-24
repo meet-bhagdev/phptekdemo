@@ -2,7 +2,7 @@
 
 This is a simple ToDo app with multiple user support.
 
-This is built on Laravel Framework 5.1. This was built for demonstrate purpose.
+This is built on Laravel Framework 5.1. This is 
 
 ## Prerequisties
 - PHP
