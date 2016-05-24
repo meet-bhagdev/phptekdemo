@@ -34,8 +34,6 @@ composer install
 ```
 
 
-Then edit `.env` file with appropriate credential for your database server. Just edit these two parameter(`DB_USERNAME`, `DB_PASSWORD`).
-
 Then create a database named `todos` and then do a database migration using this command-
 ```
 php artisan migrate
