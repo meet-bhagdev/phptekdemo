@@ -113,7 +113,8 @@ You can alter these lines to allow different file types to be parsed as PHP file
 
 If you installed Apache via the package manager, the Apache config file(s) may have a different structure. In Ubuntu, you can find apache2.conf in /etc/apache2\. Add the above lines to this file.   
 
-###To install PHP and the PHP apache module using your package manager, 
+###Install PHP from the package manager
+To install PHP and the PHP apache module using your package manager, 
 you must ensure that your distribution provides PHP 7, as earlier versions will not work. 
 
 NOTE: Installing PHP from package requires installing php-odbc for symbol definitions. However, php-odbc uses a different version of unixODBC from the one obtained when following the instructions above. As mentioned, we do not recommend using your package manager's version of unixODBC, and we cannot guarantee that the functionality obtained installing PHP this way will be the same as when installing PHP from source. Follow these steps to install from the package manager on Ubuntu:
@@ -121,7 +122,7 @@ NOTE: Installing PHP from package requires installing php-odbc for symbol defini
 1.  `Run apt-cache show php | grep Version`. The output will look like Version: 1:7.0+35ubuntu6\. The actual version of PHP immediately follows the 1: .
 2.  Run `sudo apt-get install php php-odbc libapache2-mod-php` to install PHP, the php-odbc module, and the Apache module.
 
-###Follow these steps to install from the package manager on Red Hat/CentOS:
+####Follow these steps to install from the package manager on Red Hat/CentOS:
 
 1.  Run `yum info php | grep Version` and verify that the version is at least 7.0.
 2.  Run `sudo yum install php php-odbc` to install PHP, the php-odbc module, and the Apache module.
@@ -132,9 +133,7 @@ Now edit your php.ini file to load the PHP drivers when PHP starts.
 
   If you installed PHP from package, the output will be slightly different and will likely list more .ini files, but you need only edit the php.ini file listed under Loaded Configuration File.
 
-2.  If Loaded Configuration File shows that a php.ini is loaded, edit that file. Otherwise go to the PHP directory in your home directory, run cp php.ini-development php.ini and copy the newly created php.ini file to the Configuration File (php.ini) Path indicated when running php --ini.
-
-If using the SQLSRV driver, add the following lines to your php.ini: `extension=php_sqlsrv_7_ts.so` or `extension=php_sqlsrv_7_nts.so` If using the PDO_SQLSRV driver, add extension=`php_pdo_sqlsrv_7_ts.so` or extension=`php_pdo_sqlsrv_7_nts.so` If necessary, specify the extension directory using extension_dir, for example: extension_dir = `“/usr/local/lib/php/extensions/”` . To find the default extension directory, run `php -i | grep extension_dir`.
+2.  If Loaded Configuration File shows that a php.ini is loaded, edit that file. Otherwise go to the PHP directory in your home directory, run cp php.ini-development php.ini and copy the newly created php.ini file to the Configuration File (php.ini) Path indicated when running php --ini. If using the SQLSRV driver, add the following lines to your php.ini: `extension=php_sqlsrv_7_ts.so` or `extension=php_sqlsrv_7_nts.so` If using the PDO_SQLSRV driver, add extension=`php_pdo_sqlsrv_7_ts.so` or extension=`php_pdo_sqlsrv_7_nts.so` If necessary, specify the extension directory using extension_dir, for example: extension_dir = `“/usr/local/lib/php/extensions/”` . To find the default extension directory, run `php -i | grep extension_dir`.
 
 3.  Stop and restart the Apache web server.
 
