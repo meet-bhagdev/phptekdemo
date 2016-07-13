@@ -49,21 +49,21 @@ To install from source, follow these instructions.
 
 3.  Extract the web server into a local directory and then extract the apr packages into the srclib/ Run the following commands:
 
-	`cd <path to download directory>` 
-	`tar xvzf httpd-2.4.20.tar.gz` 
-	`tar xvzf apr-1.5.2.tar.gz`
-	 `tar xvzf apr-util-1.5.4.tar.gz` 
-	`mkdir httpd-2.4.20/srclib/apr-util` 
-	`cp -r apr-1.5.2/* httpd-2.4.20/srclib/apr` 
-	`cp -r apr-util-1.5.4/* httpd-2.4.20/srclib/apr-util` 
-	`cd httpd-2.4.20/`
+	<br>`cd <path to download directory>` 
+	<br>`tar xvzf httpd-2.4.20.tar.gz` 
+	<br>`tar xvzf apr-1.5.2.tar.gz`
+	<br> `tar xvzf apr-util-1.5.4.tar.gz` 
+	<br>`mkdir httpd-2.4.20/srclib/apr-util` 
+	<br>`cp -r apr-1.5.2/* httpd-2.4.20/srclib/apr` 
+	<br>`cp -r apr-util-1.5.4/* httpd-2.4.20/srclib/apr-util` 
+	<br>`cd httpd-2.4.20/`
 
 4.  Now we compile Apache. The compilation depends on whether the PHP drivers are thread safe. If you have downloaded the thread safe drivers (with names ending in _ts.so), run the following command:
 
-	`./configure --enable-so --with-mpm=worker` 
+	<br>`./configure --enable-so --with-mpm=worker` 
 	If you have downloaded the non-thread safe drivers (with names ending in _nts.so), run: 
 	
-	`./configure --enable-so --with-mpm=prefork`
+	<br>`./configure --enable-so --with-mpm=prefork`
 	
 	If you get a message saying that PCRE is not found, it can be installed with your package manager. Run sudo apt-get install libpcre3-dev on Ubuntu, or sudo yum install pcre-devel on CentOS.
 
@@ -73,10 +73,11 @@ To install from source, follow these instructions.
 
 1.  If using Red Hat or CentOS, run the following command:
 
-		sudo yum install httpd httpd-devel 
+	<br> `sudo yum install httpd httpd-devel`
+	
 If using Ubuntu, run the following command: 
 
-		sudo apt-get install apache2 apache2-dev
+	<br> `sudo apt-get install apache2 apache2-dev`
 
 Note that your package manager's version of apache is likely not thread safe. To verify that Apache is installed and working properly, point your web browser to localhost/. If you installed from source, you will see a message saying 'It works!' If you installed from package, you may see a different landing page – here is the landing page on Ubuntu: 
 
@@ -87,10 +88,10 @@ Now you are ready to install PHP. You can install by source or, if the packaged 
 1.  Download the latest stable PHP 7 source from [http://php.net/downloads.php](http://php.net/downloads.php). In what follows, we will assume the downloaded source file is php-7.0.8.tar.gz.
 2.  Run the following commands:
 
-	`cd <path to download directory>` 
-	`tar xvzf php-7.0.8.tar.gz` 
-	`cd php-7.0.8/` 
-	`./buildconf --force`
+	<br>`cd <path to download directory>` 
+	<br>`tar xvzf php-7.0.8.tar.gz` 
+	<br>`cd php-7.0.8/` 
+	<br>`./buildconf --force`
 
 3.  Run `./configure` with the following options on the command line: 
 	a. `LIBS=-lodbc` 
