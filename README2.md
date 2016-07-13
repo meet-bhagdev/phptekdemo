@@ -28,14 +28,15 @@ from your package manager.
 * For RedHat 7.2 or CentOS 7.2
 
 	  ```sudo su ```
-	  ```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_redhat.sh ```
-	  ```sh installodbc_redhat.sh```
+	  <br>```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_redhat.sh ```
+	  <br>```sh installodbc_redhat.sh```
 
 * Verify that the ODBC driver on Linux is registered successfully by executing the following commands:
 
 	  ```odbcinst –j` `odbcinst -q -d -n "ODBC Driver 13 for SQL Server" ```
-
+<br>
 2. You should see output similar to the following: 
+
 [![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
 
 ###Install Apache: You are now ready to install Apache. You can install from source, or you can use your package manager. ###
