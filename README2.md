@@ -61,11 +61,13 @@ To install from source, follow these instructions.
 4.  Now we compile Apache. The compilation depends on whether the PHP drivers are thread safe. If you have downloaded the thread safe drivers (with names ending in _ts.so), run the following command:
 
 	`./configure --enable-so --with-mpm=worker` 
+	
 	If you have downloaded the non-thread safe drivers (with names ending in _nts.so), run: 
 	`./configure --enable-so --with-mpm=prefork`
-	If you get a message saying that PCRE is not found, it can be installed with your package manager. Run sudo apt-get install libpcre3-dev on Ubuntu, or sudo yum install pcre-devel on CentOS.
+	If you get a message saying that PCRE is not found, it can be installed with your package manager. 
+	Run `sudo apt-get install libpcre3-dev on Ubuntu`, or `sudo yum install pcre-devel on CentOS`.
 
-5.  Run make and sudo make install to complete the installation.
+5.  Run `make` and `sudo make install` to complete the installation.
 
 ###To install Apache from your package manager, follow these steps:
 
@@ -92,14 +94,14 @@ Now you are ready to install PHP. You can install by source or, if the packaged 
 3.  Run `./configure` with the following options on the command line: 
 	a. `LIBS=-lodbc` 
 	b. the path for the unixODBC header files using `--with-unixODBC=<path-to-ODBC-headers>`. To find the path for the header files, use the command `sudo find / -name sql.h`. Then add this path, without the /include/sql.h, to the command line. For example, if the find command yields `/usr/local/include/sql.h`, add `--with-unixODBC=/usr/local` to the ./configure command line.
-    c.  the path to apxs or apxs2 to configure PHP for Apache using --with-apxs2=<path-to-apxs>. To find the path to apxs (or apxs2), run sudo find / -name apxs or sudo find / -name apxs2 and add the resulting path to the option.
-	d.  if your web server has thread safety enabled, add --enable-maintainer-zts to ./configure. Otherwise you may omit this option.
+        c.  the path to apxs or apxs2 to configure PHP for Apache using --with-apxs2=<path-to-apxs>. To find the path to apxs (or apxs2), run `sudo find / -name apxs` or `sudo find / -name apxs2` and add the resulting path to the option.
+	d.  if your web server has thread safety enabled, add `--enable-maintainer-zts` to ./configure. Otherwise you may omit this option.
 
 	Thus your ./configure command should look like `./configure LIBS=-lodbc --with-unixODBC=<path-to-ODBC-headers> --with-apxs2=<path-to-apxs-executable> --enable-maintainer-zts`. 
 
 	If your ./configure command exits with an error saying it cannot find xml2-config, you need to install libxml2-dev using your package manager before continuing. Run the following command: sudo yum install libxml2-devel on Red Hat or CentOS, or sudo apt-get install libxml2-dev on Ubuntu.
 
-4.  Run make and then copy the downloaded PHP drivers into the modules/ directory.
+4.  Run `make` and then copy the downloaded PHP drivers into the modules/ directory.
 
 5.  Run `sudo make install` to install the binaries into the default php extensions directory.
 
@@ -119,7 +121,7 @@ NOTE: Installing PHP from package requires installing php-odbc for symbol defini
 1.  `Run apt-cache show php | grep Version`. The output will look like Version: 1:7.0+35ubuntu6\. The actual version of PHP immediately follows the 1: .
 2.  Run `sudo apt-get install php php-odbc libapache2-mod-php` to install PHP, the php-odbc module, and the Apache module.
 
-Follow these steps to install from the package manager on Red Hat/CentOS:
+###Follow these steps to install from the package manager on Red Hat/CentOS:
 
 1.  Run `yum info php | grep Version` and verify that the version is at least 7.0.
 2.  Run `sudo yum install php php-odbc` to install PHP, the php-odbc module, and the Apache module.
@@ -130,13 +132,13 @@ Now edit your php.ini file to load the PHP drivers when PHP starts.
 
   If you installed PHP from package, the output will be slightly different and will likely list more .ini files, but you need only edit the php.ini file listed under Loaded Configuration File.
 
-1.  If Loaded Configuration File shows that a php.ini is loaded, edit that file. Otherwise go to the PHP directory in your home directory, run cp php.ini-development php.ini and copy the newly created php.ini file to the Configuration File (php.ini) Path indicated when running php --ini.
+2.  If Loaded Configuration File shows that a php.ini is loaded, edit that file. Otherwise go to the PHP directory in your home directory, run cp php.ini-development php.ini and copy the newly created php.ini file to the Configuration File (php.ini) Path indicated when running php --ini.
 
 If using the SQLSRV driver, add the following lines to your php.ini: `extension=php_sqlsrv_7_ts.so` or `extension=php_sqlsrv_7_nts.so` If using the PDO_SQLSRV driver, add extension=`php_pdo_sqlsrv_7_ts.so` or extension=`php_pdo_sqlsrv_7_nts.so` If necessary, specify the extension directory using extension_dir, for example: extension_dir = `“/usr/local/lib/php/extensions/”` . To find the default extension directory, run `php -i | grep extension_dir`.
 
-1.  Stop and restart the Apache web server.
+3.  Stop and restart the Apache web server.
 
-1.  Test your apache and PHP installation with a script that calls phpinfo(). Copy the following to a file called phpinfo.php:
+4.  Test your apache and PHP installation with a script that calls phpinfo(). Copy the following to a file called phpinfo.php:
 
 `<?php phpinfo(); ?>` and copy that file to your web directory. This is likely to be either /var/www/html, or the htdocs/ directory in the Apache directory. In a web browser, go to localhost/phpinfo.php. You should see a page with information about your PHP installation, and information on enabled extensions, including sqlsrv and pdo_sqlsrv.
 
