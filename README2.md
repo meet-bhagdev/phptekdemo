@@ -49,7 +49,7 @@ To install from source, follow these instructions.
 
 3.  Extract the web server into a local directory and then extract the apr packages into the srclib/ Run the following commands:
 
-	<br>`cd <path to download directory>` 
+	`cd <path to download directory>` 
 	<br>`tar xvzf httpd-2.4.20.tar.gz` 
 	<br>`tar xvzf apr-1.5.2.tar.gz`
 	<br> `tar xvzf apr-util-1.5.4.tar.gz` 
@@ -60,11 +60,9 @@ To install from source, follow these instructions.
 
 4.  Now we compile Apache. The compilation depends on whether the PHP drivers are thread safe. If you have downloaded the thread safe drivers (with names ending in _ts.so), run the following command:
 
-	<br>`./configure --enable-so --with-mpm=worker` 
+	`./configure --enable-so --with-mpm=worker` 
 	If you have downloaded the non-thread safe drivers (with names ending in _nts.so), run: 
-	
-	<br>`./configure --enable-so --with-mpm=prefork`
-	
+	`./configure --enable-so --with-mpm=prefork`
 	If you get a message saying that PCRE is not found, it can be installed with your package manager. Run sudo apt-get install libpcre3-dev on Ubuntu, or sudo yum install pcre-devel on CentOS.
 
 5.  Run make and sudo make install to complete the installation.
@@ -72,12 +70,10 @@ To install from source, follow these instructions.
 ###To install Apache from your package manager, follow these steps:
 
 1.  If using Red Hat or CentOS, run the following command:
-
-	<br> `sudo yum install httpd httpd-devel`
+	`sudo yum install httpd httpd-devel`
 	
-If using Ubuntu, run the following command: 
-
-	<br> `sudo apt-get install apache2 apache2-dev`
+    If using Ubuntu, run the following command: 
+	`sudo apt-get install apache2 apache2-dev`
 
 Note that your package manager's version of apache is likely not thread safe. To verify that Apache is installed and working properly, point your web browser to localhost/. If you installed from source, you will see a message saying 'It works!' If you installed from package, you may see a different landing page – here is the landing page on Ubuntu: 
 
