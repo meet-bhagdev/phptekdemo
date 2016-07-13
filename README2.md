@@ -22,8 +22,8 @@ from your package manager.
 * For Ubuntu 15.04 amd 16.04
 
 	  ```sudo su ```
-	  ```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_ubuntu.sh``` 
-	  ```sh installodbc_ubuntu.sh```
+	  https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_ubuntu.sh
+	  sh installodbc_ubuntu.sh
 
 * For RedHat 7.2 or CentOS 7.2
 
