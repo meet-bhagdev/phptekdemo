@@ -22,18 +22,18 @@ from your package manager.
 * For Ubuntu 15.04 amd 16.04
 
 	  ```sudo su ```
-	  ```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_ubuntu.sh ```
-	  ```sh installodbc_ubuntu.sh ```
+	  <br>```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_ubuntu.sh ```
+	  <br>```sh installodbc_ubuntu.sh ```
 
 * For RedHat 7.2 or CentOS 7.2
 
 	  ```sudo su ```
-	  ```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_redhat.sh``` 
+	  ```https://raw.githubusercontent.com/Azure/msphpsql/PHP-7.0-Linux/ODBC%20install%20scripts/installodbc_redhat.sh ```
 	  ```sh installodbc_redhat.sh```
 
 * Verify that the ODBC driver on Linux is registered successfully by executing the following commands:
 
-		```odbcinst –j` `odbcinst -q -d -n "ODBC Driver 13 for SQL Server" ```
+	  ```odbcinst –j` `odbcinst -q -d -n "ODBC Driver 13 for SQL Server" ```
 
 2. You should see output similar to the following: 
 [![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
