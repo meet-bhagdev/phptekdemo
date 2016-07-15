@@ -1,7 +1,7 @@
 import pyodbc
 server = 'tcp:csucla2015.database.windows.net'
 database = 'AdventureWorks'
-username = 'meet_bhagde'
+username = 'meet_bhagdev'
 password = 'avengersA1'
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 13 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
