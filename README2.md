@@ -45,11 +45,11 @@ To install from source, follow these instructions.
 
 1. From the Apache web site, download the Apache source. Go to [http://httpd.apache.org/download.cgi#apache24](http://httpd.apache.org/download.cgi) and click on the link to the tar.gz file. In what follows, we'll assume it is httpd-2.4.20.tar.gz. Take note of the directory to which it is downloaded.
 
-[![pic2](https://msdnshared.blob.core.windows.net/media/2016/07/image2100.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image2100.png) 
+	[![pic2](https://msdnshared.blob.core.windows.net/media/2016/07/image2100.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image2100.png) 
 	
 2.  Download the Apache Portable Runtime (APR) and APR utilities from [http://apr.apache.org/download.cgi](http://apr.apache.org/download.cgi). Click on apr-1.5.2.tar.gz and apr-util-1.5.4.tar.gz to download.
 
-[![pic3](https://msdnshared.blob.core.windows.net/media/2016/07/image3100.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image3100.png) 
+	[![pic3](https://msdnshared.blob.core.windows.net/media/2016/07/image3100.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image3100.png) 
 	
 3.  Extract the web server into a local directory and then extract the apr packages into the srclib/ Run the following commands:
 
