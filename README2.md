@@ -150,11 +150,11 @@ Now edit your php.ini file to load the PHP drivers when PHP starts.
 
 `<?php phpinfo(); ?>` and copy that file to your web directory. This is likely to be either /var/www/html, or the htdocs/ directory in the Apache directory. In a web browser, go to localhost/phpinfo.php. You should see a page with information about your PHP installation, and information on enabled extensions, including sqlsrv and pdo_sqlsrv.
 
-	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
 	
-	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
 
-	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
 	
  If you do not see sections on sqlsrv and pdo_sqlsrv extensions, these extensions are not loaded. Near the top of the PHP info page, check which php.ini is loaded. This may be different from the php.ini file loaded when running php from the command line, especially if Apache and PHP were installed from your package manager. In this case, edit the php.ini displayed on the PHP info page to load the extensions in the same way described above. Restart the Apache web server and verify that phpinfo() loads the sqlsrv extensions.   
 
