@@ -101,11 +101,11 @@ Now you are ready to install PHP. You can install by source or, if the packaged 
 	b. the path for the unixODBC header files using `--with-unixODBC=<path-to-ODBC-headers>`. To find the path for the header files, use the command `sudo find / -name sql.h`. Then add this path, without the /include/sql.h, to the command line. For example, if the find command yields `/usr/local/include/sql.h`, add `--with-unixODBC=/usr/local` to the ./configure command line.
         c.  the path to apxs or apxs2 to configure PHP for Apache using --with-apxs2=<path-to-apxs>. To find the path to apxs (or apxs2), run `sudo find / -name apxs` or `sudo find / -name apxs2` and add the resulting path to the option.
 	d.  if your web server has thread safety enabled, add `--enable-maintainer-zts` to ./configure. Otherwise you may omit this option.
-
-	[![pic5](https://msdnshared.blob.core.windows.net/media/2016/07/image510.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image510.png) 
 	
 	Thus your ./configure command should look like `./configure LIBS=-lodbc --with-unixODBC=<path-to-ODBC-headers> --with-apxs2=<path-to-apxs-executable> --enable-maintainer-zts`. 
 
+	[![pic5](https://msdnshared.blob.core.windows.net/media/2016/07/image510.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image510.png) 
+	
 	If your ./configure command exits with an error saying it cannot find xml2-config, you need to install libxml2-dev using your package manager before continuing. Run the following command: sudo yum install libxml2-devel on Red Hat or CentOS, or sudo apt-get install libxml2-dev on Ubuntu.
 
 4.  Run `make` and then copy the downloaded PHP drivers into the modules/ directory.
