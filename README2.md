@@ -35,7 +35,7 @@ from your package manager.
 
 	  ```odbcinst –j` `odbcinst -q -d -n "ODBC Driver 13 for SQL Server" ```
 	  
-2. You should see output similar to the following: 
+You should see output similar to the following: 
 
 	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png) 
 
