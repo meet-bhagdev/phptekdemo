@@ -37,7 +37,7 @@ from your package manager.
 	  
 2. You should see output similar to the following: 
 
-	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png) 
 
 ###Install Apache: You are now ready to install Apache. You can install from source, or you can use your package manager. ###
 
@@ -45,7 +45,7 @@ To install from source, follow these instructions.
 
 1. From the Apache web site, download the Apache source. Go to [http://httpd.apache.org/download.cgi#apache24](http://httpd.apache.org/download.cgi) and click on the link to the tar.gz file. In what follows, we'll assume it is httpd-2.4.20.tar.gz. Take note of the directory to which it is downloaded.
 
-	[![pic2](https://msdnshared.blob.core.windows.net/media/2016/07/image463.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image463.png) 
+	[![pic2](https://msdnshared.blob.core.windows.net/media/2016/07/image2100.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image2100.png) 
 	
 2.  Download the Apache Portable Runtime (APR) and APR utilities from [http://apr.apache.org/download.cgi](http://apr.apache.org/download.cgi). Click on apr-1.5.2.tar.gz and apr-util-1.5.4.tar.gz to download.
 
