@@ -83,7 +83,7 @@ To install from source, follow these instructions.
 
 Note that your package manager's version of apache is likely not thread safe. To verify that Apache is installed and working properly, point your web browser to localhost/. If you installed from source, you will see a message saying 'It works!' If you installed from package, you may see a different landing page – here is the landing page on Ubuntu: 
 
-	[![pic4](https://msdnshared.blob.core.windows.net/media/2016/07/image463.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image463.png) 
+[![pic4](https://msdnshared.blob.core.windows.net/media/2016/07/image463.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image463.png) 
 	
 ###Install PHP
 Now you are ready to install PHP. You can install by source or, if the packaged version is PHP 7, with your package manager. However, we recommend you install from source. To install PHP from source, follow these instructions:
