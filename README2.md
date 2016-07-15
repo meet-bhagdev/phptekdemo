@@ -37,7 +37,7 @@ from your package manager.
 	  
 You should see output similar to the following: 
 
-	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png) 
+[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png)](https://msdnshared.blob.core.windows.net/media/2016/07/image1101.png) 
 
 ###Install Apache: You are now ready to install Apache. You can install from source, or you can use your package manager. ###
 
