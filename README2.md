@@ -45,8 +45,12 @@ To install from source, follow these instructions.
 
 1. From the Apache web site, download the Apache source. Go to [http://httpd.apache.org/download.cgi#apache24](http://httpd.apache.org/download.cgi) and click on the link to the tar.gz file. In what follows, we'll assume it is httpd-2.4.20.tar.gz. Take note of the directory to which it is downloaded.
 
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
 2.  Download the Apache Portable Runtime (APR) and APR utilities from [http://apr.apache.org/download.cgi](http://apr.apache.org/download.cgi). Click on apr-1.5.2.tar.gz and apr-util-1.5.4.tar.gz to download.
 
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
 3.  Extract the web server into a local directory and then extract the apr packages into the srclib/ Run the following commands:
 
 	`cd <path to download directory>` 
@@ -79,7 +83,8 @@ To install from source, follow these instructions.
 
 Note that your package manager's version of apache is likely not thread safe. To verify that Apache is installed and working properly, point your web browser to localhost/. If you installed from source, you will see a message saying 'It works!' If you installed from package, you may see a different landing page – here is the landing page on Ubuntu: 
 
-
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
 ###Install PHP
 Now you are ready to install PHP. You can install by source or, if the packaged version is PHP 7, with your package manager. However, we recommend you install from source. To install PHP from source, follow these instructions:
 
@@ -97,6 +102,8 @@ Now you are ready to install PHP. You can install by source or, if the packaged 
         c.  the path to apxs or apxs2 to configure PHP for Apache using --with-apxs2=<path-to-apxs>. To find the path to apxs (or apxs2), run `sudo find / -name apxs` or `sudo find / -name apxs2` and add the resulting path to the option.
 	d.  if your web server has thread safety enabled, add `--enable-maintainer-zts` to ./configure. Otherwise you may omit this option.
 
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
 	Thus your ./configure command should look like `./configure LIBS=-lodbc --with-unixODBC=<path-to-ODBC-headers> --with-apxs2=<path-to-apxs-executable> --enable-maintainer-zts`. 
 
 	If your ./configure command exits with an error saying it cannot find xml2-config, you need to install libxml2-dev using your package manager before continuing. Run the following command: sudo yum install libxml2-devel on Red Hat or CentOS, or sudo apt-get install libxml2-dev on Ubuntu.
@@ -131,6 +138,8 @@ Now edit your php.ini file to load the PHP drivers when PHP starts.
 
 1.  To find the location of your php.ini file, run php --ini to find the directory PHP searches for php.ini. You will see output similar to the following:
 
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
   If you installed PHP from package, the output will be slightly different and will likely list more .ini files, but you need only edit the php.ini file listed under Loaded Configuration File.
 
 2.  If Loaded Configuration File shows that a php.ini is loaded, edit that file. Otherwise go to the PHP directory in your home directory, run cp php.ini-development php.ini and copy the newly created php.ini file to the Configuration File (php.ini) Path indicated when running php --ini. If using the SQLSRV driver, add the following lines to your php.ini: `extension=php_sqlsrv_7_ts.so` or `extension=php_sqlsrv_7_nts.so` If using the PDO_SQLSRV driver, add extension=`php_pdo_sqlsrv_7_ts.so` or extension=`php_pdo_sqlsrv_7_nts.so` If necessary, specify the extension directory using extension_dir, for example: extension_dir = `“/usr/local/lib/php/extensions/”` . To find the default extension directory, run `php -i | grep extension_dir`.
@@ -141,6 +150,12 @@ Now edit your php.ini file to load the PHP drivers when PHP starts.
 
 `<?php phpinfo(); ?>` and copy that file to your web directory. This is likely to be either /var/www/html, or the htdocs/ directory in the Apache directory. In a web browser, go to localhost/phpinfo.php. You should see a page with information about your PHP installation, and information on enabled extensions, including sqlsrv and pdo_sqlsrv.
 
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+
+	[![pic1](https://msdnshared.blob.core.windows.net/media/2016/07/pic1-300x225.png)](https://msdnshared.blob.core.windows.net/media/2016/07/pic1.png) 
+	
  If you do not see sections on sqlsrv and pdo_sqlsrv extensions, these extensions are not loaded. Near the top of the PHP info page, check which php.ini is loaded. This may be different from the php.ini file loaded when running php from the command line, especially if Apache and PHP were installed from your package manager. In this case, edit the php.ini displayed on the PHP info page to load the extensions in the same way described above. Restart the Apache web server and verify that phpinfo() loads the sqlsrv extensions.   
 
 ####Links: 
