@@ -8,13 +8,15 @@
 
 
 - [Python 2.7.6](https://www.python.org/download/releases/2.7.6/).
-- [ODBC Driver 13 for SQL Server Windows](https://www.microsoft.com/en-us/download/details.aspx?id=50420)
+- [ODBC Driver 11 or 13 for SQL Server Windows](https://www.microsoft.com/en-us/download/details.aspx?id=50420)
 - [Pyodbc](https://pypi.python.org/pypi/pyodbc/3.0.10)
 
 ### Install the required modules
 
-Navigate to your Python directory where the pip installer is located. For example C:\Python27\Scripts>. Install pyodbc
-  
+Navigate to your Python directory where the pip installer is located. For example C:\Python27\Scripts>. 
+
+####Install pyodbc
+
     pip install pyodbc
 
 *Note: Instructions to enable the use pip can be found [here](http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows)*
